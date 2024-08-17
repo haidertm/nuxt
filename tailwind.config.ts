@@ -6,7 +6,7 @@ type AddComponentsFunction = (components: Record<string, any>) => void;
 
 export default {
   presets: [tailwindConfig],
-  content: ['./**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
+  content: ['./{components,pages}/**/*.vue', '../../node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
   theme: {
     extend: {
       keyframes: {

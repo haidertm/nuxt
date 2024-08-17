@@ -6,8 +6,6 @@
   <Header :main-menu="mainMenuNavigation" />
 
   <USPBar v-if="shouldRender" :is-homepage="false" />
-
-  Hello from layout
   <main>
     <slot />
   </main>
