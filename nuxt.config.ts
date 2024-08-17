@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
-    'vue3-carousel-nuxt'
+    'vue3-carousel-nuxt',
+    '@nuxtjs/device'
   ],
   runtimeConfig: {
     public: {
