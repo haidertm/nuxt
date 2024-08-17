@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       $config: config
     }
   },
-  // css: ['~/assets/style.scss'],
+  css: ['~/assets/style.scss'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     // cssPath: false
