@@ -10,7 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@storefront-ui/typography": "^2.6.1",
     "nuxt": "^3.12.4",
-    "vue": "latest"
+    "vue": "latest",
+    "vue3-carousel-nuxt": "^1.1.2"
+  },
+  "devDependencies": {
+    "@savvywombat/tailwindcss-grid-areas": "^4.0.0",
+    "@storefront-ui/vue": "^2.6.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
+    "postcss": "^8.4.41",
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.10",
+    "postcss-custom-properties": "^13.3.2"
   }
 }
