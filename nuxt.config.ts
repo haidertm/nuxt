@@ -6,14 +6,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
-    'vue3-carousel-nuxt',
-    'nuxt-purgecss'
+    'vue3-carousel-nuxt'
   ],
   runtimeConfig: {
     public: {
       $config: config
     }
   },
+  webpack: {
+    extractCSS: true
+  },
+  css: ['~/assets/style.scss'],
   // css: ['~/assets/style.scss'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css'
