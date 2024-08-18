@@ -11,11 +11,14 @@
 </template>
 
 <script setup lang="ts">
+import { usePromotionalBanners } from '~/composables/usePromotionalBanners/usePromotionalBanners';
+
+const { data: promotionalBanners, fetchPromotionalBanners } = usePromotionalBanners();
 const $config = useRuntimeConfig();
-// fetchPromotionalBanners();
+fetchPromotionalBanners();
 const isDateInRange = computed(
     () =>
-        [].filter((banner) => {
+        promotionalBanners.value?.getPromotionalBanners?.filter((banner) => {
           const today = new Date();
 
           const { start_date, end_date } = banner || null;
@@ -30,7 +33,7 @@ const filterBanners = (viewStatusFilter: string[]) => {
   const bannersInRange = isDateInRange.value;
 
   return (
-      []?.filter((banner) => {
+      promotionalBanners.value?.getPromotionalBanners?.filter((banner) => {
         const { store_id, status, banner_veiw_status, image, webp_image } = banner || {};
         const storeId = store_id.split(',');
         const viewStatus = (banner_veiw_status || '').toLowerCase();
@@ -38,7 +41,7 @@ const filterBanners = (viewStatusFilter: string[]) => {
         return (
             image &&
             webp_image &&
-            storeId.includes($config.public.storeId) &&
+            storeId.includes('1') &&
             status === 1 &&
             bannersInRange?.includes(banner) &&
             viewStatusFilter.includes(viewStatus)

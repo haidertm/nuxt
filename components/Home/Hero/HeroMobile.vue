@@ -51,9 +51,7 @@ const showJpg = computed(() => {
 });
 
 
-const {
-  public: { configSite }
-} = useRuntimeConfig();
+const configSite = 'trepanel';
 
 const defaultClasses = {
   div: ' mp:pb-[100%]'
