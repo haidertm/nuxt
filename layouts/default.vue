@@ -6,7 +6,6 @@
   <Header :main-menu="mainMenuNavigation" />
 
   <USPBar v-if="shouldRender" :is-homepage="false" />
-  <NuxtLink to="/test">Test Page</NuxtLink>
   <main>
     <slot />
   </main>

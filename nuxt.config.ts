@@ -11,8 +11,16 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     'vue3-carousel-nuxt',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    'nuxt-booster'
   ],
+  booster: {},
+  image: {
+    provider: 'ipx',
+    ipx: {
+      maxAge: 60 * 60 * 24 * 365
+    }
+  },
   runtimeConfig: {
     public: {
       $config: config
