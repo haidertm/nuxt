@@ -16,7 +16,6 @@ export default defineNuxtConfig({
   ],
   booster: {},
   image: {
-    provider: 'ipx',
     ipx: {
       maxAge: 60 * 60 * 24 * 365
     }
