@@ -12,8 +12,7 @@ export default defineEventHandler(async (event) => {
 
   const client = getClient();
   if (client) {
-    const response = client.query(requestBody, {});
-    return response;
+    return client.query(requestBody, {});
   }
   //
   console.log('graphqlClient', getClient);
