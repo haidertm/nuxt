@@ -29,8 +29,10 @@ const config: Tconfig = {
       }
     ],
     link: [
-      { rel: 'icon', href: `/favicon/${process.env.NUXT_PUBLIC_CONFIG_SITE}.ico` },
-      { rel: 'apple-touch-icon', href: `/favicon/${process.env.NUXT_PUBLIC_CONFIG_SITE}-180x180.png` }
+      { rel: 'icon', href: `/favicon/trepanel.ico` },
+      { rel: 'apple-touch-icon', href: `/favicon/trepanel-180x180.png` },
+      { rel: 'preload', href: '/fonts/gillsansmt.woff' },
+      { rel: 'preload', href: '/fonts/GillSansBold.woff' }
     ]
   },
   siteUrl: urlMap[process.env.NUXT_PUBLIC_INSTANCE as EnvironmentType],

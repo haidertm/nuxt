@@ -3,6 +3,10 @@ const config = require(`./config/index.ts`);
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  ssr: true,
+  app: {
+    head: config.appHead
+  },
   modules: [
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
